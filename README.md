@@ -2,10 +2,10 @@
 
 ## 📌 Project Description
 
-SpringBoot Job App is a backend REST API application developed using Spring Boot.
-This project demonstrates CRUD (Create, Read, Update, Delete) operations for managing job listings.
+SpringBoot Job App is a full-stack web application developed using Spring Boot and JSP.
+It allows users to manage job listings with complete CRUD (Create, Read, Update, Delete) operations.
 
-Currently, the application uses in-memory data storage (no database integration), making it suitable for learning backend development concepts and REST API design.
+The project integrates a PostgreSQL database for persistent storage and uses JSP for the frontend interface.
 
 ---
 
@@ -13,10 +13,11 @@ Currently, the application uses in-memory data storage (no database integration)
 
 * ➕ Add new job listings
 * 📄 View all jobs
-* 🔍 Get job details by ID
+* 🔍 View job details
 * ✏️ Update job information
 * ❌ Delete job listings
-* 🌐 REST API implementation
+* 🌐 Dynamic web pages using JSP
+* 🗄️ Persistent data storage using PostgreSQL
 
 ---
 
@@ -24,27 +25,28 @@ Currently, the application uses in-memory data storage (no database integration)
 
 * Java
 * Spring Boot
-* Spring Web
+* Spring MVC
+* JSP (Java Server Pages)
+* PostgreSQL
+* Spring Data JPA
 * Maven
 
 ---
 
-## ⚠️ Current Limitation
+## 🏗️ Project Architecture
 
-* ❌ No database integration
-* ❌ Data stored temporarily (in-memory)
-* ❌ Data resets when server restarts
-
----
-
-## 🏗️ Project Structure
-
-```bash
-src/
- ├── controller/
- ├── service/
- ├── model/
- └── repository/ (if present)
+```
+Client (Browser)
+      ↓
+JSP (View Layer)
+      ↓
+Controller (Spring MVC)
+      ↓
+Service Layer
+      ↓
+Repository (JPA)
+      ↓
+PostgreSQL Database
 ```
 
 ---
@@ -53,19 +55,30 @@ src/
 
 ### 🔹 Step 1: Clone Repository
 
-```bash
+```
 git clone https://github.com/prasadduvvada/SpringBoot-JobApp.git
 ```
 
-### 🔹 Step 2: Open in IntelliJ IDEA
+### 🔹 Step 2: Configure Database
 
-* Import as Maven project
+Update `application.properties`:
+
+```
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_db
+spring.datasource.username=postgres
+spring.datasource.password=your_password
+```
+
+---
 
 ### 🔹 Step 3: Run Application
 
-* Run main class (`@SpringBootApplication`)
+* Open in IntelliJ IDEA
+* Run main class
 
-### 🔹 Step 4: Access APIs
+---
+
+### 🔹 Step 4: Access Application
 
 ```
 http://localhost:8080
@@ -73,46 +86,35 @@ http://localhost:8080
 
 ---
 
-## 📡 API Endpoints
+## 📡 Main Functionalities
 
-| Method | Endpoint   | Description    |
-| ------ | ---------- | -------------- |
-| GET    | /jobs      | Get all jobs   |
-| GET    | /jobs/{id} | Get job by ID  |
-| POST   | /jobs      | Create new job |
-| PUT    | /jobs/{id} | Update job     |
-| DELETE | /jobs/{id} | Delete job     |
+* Job listing management
+* Form handling using JSP
+* Data persistence with PostgreSQL
 
 ---
 
-## 🧪 Sample JSON
+## 🧪 Screenshots
 
-```json
-{
-  "title": "Java Developer",
-  "company": "ABC Pvt Ltd",
-  "location": "Hyderabad"
-}
-```
+*(Add your UI screenshots here)*
 
 ---
 
 ## 🎯 Learning Outcomes
 
-* Understanding REST API development
-* Spring Boot project structure
-* CRUD operations implementation
-* Backend logic design
+* Full-stack development using Java
+* MVC architecture understanding
+* JSP integration with Spring Boot
+* Database connectivity using JPA
 
 ---
 
 ## 🔮 Future Enhancements
 
-* ✅ Add MySQL database integration
-* ✅ Use Spring Data JPA
-* ✅ Add validation
-* ✅ Add Swagger documentation
-* ✅ Build frontend using React
+* Add user authentication (login/signup)
+* Improve UI with CSS/Bootstrap
+* Convert frontend to React
+* Deploy on cloud (AWS)
 
 ---
 
