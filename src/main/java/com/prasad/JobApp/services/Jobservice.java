@@ -6,11 +6,8 @@ import com.prasad.JobApp.repositary.Jobrepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Arrays;
-=======
->>>>>>> d76abb4c1621d31242ee37f5ce8997ab794e9ed8
 import java.util.List;
 
 @Service
@@ -18,7 +15,6 @@ public class Jobservice {
     @Autowired
     public Jobrepo repo;
 
-<<<<<<< HEAD
     public void loaddata(){
     List<JobPost> jobs = new ArrayList<>(Arrays.asList(
             new JobPost(1, "Java Developer", "Must have good experience in core Java and advanced Java", 2,
@@ -47,16 +43,7 @@ public class Jobservice {
         repo.save(jobPost);
     }
 
-    public List<JobPost> getalljobs(){
-       return  repo.findAll();
-=======
-    public void addjob(JobPost jobPost){
-        repo.addjob(jobPost);
+    public List<JobPost> getalljobs() {
+        return repo.findAll();
     }
-
-    public List<JobPost> getalljobs(){
-       return  repo.getalljobs();
->>>>>>> d76abb4c1621d31242ee37f5ce8997ab794e9ed8
     }
-
-}

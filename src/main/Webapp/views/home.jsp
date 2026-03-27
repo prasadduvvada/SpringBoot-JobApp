@@ -38,7 +38,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="https://telusko.com/">Contact</a>
+					<a class="nav-link" href="https://www.linkedin.com/in/lakshmi-prasad-duvvada-31045333b/" rel="noopener noreferrer">Contact</a>
 				</li>
 			</ul>
 		</div>
