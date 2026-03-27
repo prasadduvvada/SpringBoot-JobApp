@@ -7,7 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.PutMapping;
+=======
+>>>>>>> d76abb4c1621d31242ee37f5ce8997ab794e9ed8
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -38,9 +41,16 @@ public class controllers {
     public String alljobs(Model m){
         List<JobPost> job = service.getalljobs();
         m.addAttribute("jobPosts",job);
+<<<<<<< HEAD
         service.loaddata();
         return "viewalljobs";
     }
 
 
+=======
+        return "viewalljobs";
+
+    }
+
+>>>>>>> d76abb4c1621d31242ee37f5ce8997ab794e9ed8
 }
