@@ -1,0 +1,52 @@
+/* GOOGLE FONT FEEL (optional if you add in HTML)
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+*/
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 10px 20px;
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffd166;
+}
+
+/* CONTAINER */
+.container {
+    margin-top: 60px;
+}
+
+/* GLASS CARD */
+.cdClass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 25px;
+    color: #fff;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+.cdClass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}

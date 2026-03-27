@@ -1,0 +1,48 @@
+/* OVAL BOX CONTAINER */
+.oval-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* OVAL BOX (GLASS STYLE) */
+.oval-box {
+    width: 280px;
+    height: 180px;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+
+    border-radius: 50%;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    cursor: pointer;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.oval-box:hover {
+    transform: scale(1.08) rotate(2deg);
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+
+/* TEXT INSIDE */
+.oval-box h3 {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.oval-box p {
+    font-size: 14px;
+    opacity: 0.8;
+}
