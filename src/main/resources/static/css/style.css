@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    background: linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b,
+            #2563eb
+    );
+    background-size:400% 400%;
+    animation: gradientMove 10s ease infinite;
+    color:white;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+
+.navbar{
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.08) !important;
+    border:1px solid rgba(255,255,255,0.1);
+    margin:15px;
+    border-radius:18px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+.navbar-brand{
+    color:white !important;
+    font-weight:700;
+}
+
+.nav-link{
+    color:white !important;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#38bdf8 !important;
+    transform:translateY(-2px);
+}
+
+/* HERO SECTION */
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:1.2rem;
+    opacity:.8;
+    margin-top:15px;
+}
+
+/* BUTTONS */
+
+.cool-btn{
+    border:none;
+    border-radius:12px;
+    padding:12px 25px;
+    font-weight:600;
+    background:linear-gradient(45deg,#3b82f6,#06b6d4);
+    color:white;
+    transition:.3s;
+    text-decoration:none;
+}
+
+.cool-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+/* GLASS CARDS */
+
+.card{
+    background:rgba(255,255,255,.08) !important;
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1) !important;
+    border-radius:20px !important;
+    color:white !important;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+.card-title{
+    font-weight:700;
+}
+
+/* FORM */
+
+.form-control,
+.form-select{
+    background:rgba(255,255,255,.1);
+    color:white;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.form-control:focus,
+.form-select:focus{
+    background:rgba(255,255,255,.15);
+    color:white;
+    box-shadow:none;
+    border-color:#38bdf8;
+}
+
+textarea{
+    resize:none;
+}
+
+/* BADGES */
+
+.tech-badge{
+    display:inline-block;
+    padding:6px 12px;
+    margin:4px;
+    border-radius:30px;
+    background:#2563eb;
+    color:white;
+    font-size:14px;
+}
+
+/* SUCCESS PAGE */
+
+.success-card{
+    max-width:700px;
+    margin:auto;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#38bdf8;
+    border-radius:10px;
+}

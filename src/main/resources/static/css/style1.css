@@ -1,0 +1,89 @@
+/* OVAL BOX CONTAINER */
+.oval-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+    perspective: 1000px; /* Enables 3D space for the cards */
+}
+
+/* OVAL BOX (UPGRADED GLASSMORPHISM) */
+.oval-box {
+    width: 280px;
+    height: 180px;
+
+    /* Sleeker glass effect with a subtle dark tint */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    /* Squircle / Pill shape: Way better for text layout than a strict 50% circle */
+    border-radius: 90px / 60px;
+
+    /* Crisp, glowing border */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px; /* Prevents text from hitting the curved edges */
+    box-sizing: border-box;
+    cursor: pointer;
+
+    /* Sophisticated shadow + glow */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+    /* Ultra-smooth cubic-bezier transition */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+                box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+                border-color 0.3s ease;
+}
+
+/* HOVER EFFECT (CYBER-GLOW & 3D TILT) */
+.oval-box:hover {
+    /* Subtle 3D tilt up towards the user */
+    transform: translateY(-10px) rotateX(5deg) scale(1.04);
+
+    /* Neon glow effect that replaces the harsh gradient background */
+    border-color: rgba(255, 117, 140, 0.6);
+    box-shadow: 0 20px 40px rgba(255, 117, 140, 0.25),
+                0 0 20px rgba(255, 126, 179, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* TEXT INSIDE */
+.oval-box h3 {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    background: linear-gradient(to right, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.oval-box p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+/* Dynamic text color swap on hover */
+.oval-box:hover h3 {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.oval-box:hover p {
+    color: rgba(255, 255, 255, 0.9);
+}
